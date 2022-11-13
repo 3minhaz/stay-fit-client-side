@@ -9,7 +9,7 @@ const MyOrders = () => {
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
-        fetch(`https://boiling-sierra-59765.herokuapp.com/myBooking/${user.email}`)
+        fetch(`https://stay-fit.onrender.com/myBooking/${user.email}`)
             .then(res => res.json())
             .then(data => {
                 setMyBooking(data)
@@ -21,7 +21,7 @@ const MyOrders = () => {
     const handleDeleteBooking = id => {
         const proceed = window.confirm('are you sure ,you want to delete the items');
         if (proceed) {
-            fetch(`https://boiling-sierra-59765.herokuapp.com/myBooking/${id}`, {
+            fetch(`https://stay-fit.onrender.com/myBooking/${id}`, {
                 method: 'DELETE',
                 headers: {
                     'content-type': 'application/json'

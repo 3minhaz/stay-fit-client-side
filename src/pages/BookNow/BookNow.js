@@ -11,7 +11,7 @@ const BookNow = () => {
     const { user } = useAuth();
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     useEffect(() => {
-        fetch(`https://boiling-sierra-59765.herokuapp.com/programs/${id}`)
+        fetch(`https://stay-fit.onrender.com/programs/${id}`)
             .then(res => res.json())
             .then(data => setBook(data));
     }, [])
@@ -20,7 +20,7 @@ const BookNow = () => {
         data.email = user.email;
         data.program = book;
         data.status = 'pending';
-        fetch('https://boiling-sierra-59765.herokuapp.com/programBook', {
+        fetch('https://stay-fit.onrender.com/programBook', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(data)

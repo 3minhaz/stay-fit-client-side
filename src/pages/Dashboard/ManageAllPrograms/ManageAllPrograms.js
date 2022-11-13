@@ -9,7 +9,7 @@ const ManageAllPrograms = () => {
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
-        fetch(`https://boiling-sierra-59765.herokuapp.com/programs`)
+        fetch(`https://stay-fit.onrender.com/programs`)
             .then(res => res.json())
             .then(data => {
                 setPrograms(data)
@@ -21,7 +21,7 @@ const ManageAllPrograms = () => {
     const handleProgramDelete = (id) => {
         const proceed = window.confirm('are you sure you want to delete the program')
         if (proceed) {
-            fetch(`https://boiling-sierra-59765.herokuapp.com/manageAllPrograms/${id}`, {
+            fetch(`https://stay-fit.onrender.com/manageAllPrograms/${id}`, {
                 method: 'DELETE',
                 headers: {
                     'content-type': 'application/json'

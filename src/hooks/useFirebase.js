@@ -82,7 +82,7 @@ const useFirebase = () => {
         ;
     }
     useEffect(() => {
-        fetch(`https://boiling-sierra-59765.herokuapp.com/users/${user?.email}`)
+        fetch(`https://stay-fit.onrender.com/users/${user?.email}`)
             .then(res => res.json())
             .then(data => setIsAdmin(data?.admin))
     }, [user?.email])
@@ -117,7 +117,7 @@ const addUserToDB = (email, method, name) => {
         email: email,
         displayName: name,
     }
-    fetch('https://boiling-sierra-59765.herokuapp.com/addUsers', {
+    fetch('https://stay-fit.onrender.com/addUsers', {
         method: method,
         headers: {
             'content-type': 'application/json',

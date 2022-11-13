@@ -4,7 +4,7 @@ import { useForm } from 'react-hook-form';
 const AddPrograms = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
-        fetch('https://boiling-sierra-59765.herokuapp.com/addPrograms', {
+        fetch('https://stay-fit.onrender.com/addPrograms', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',

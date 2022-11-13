@@ -4,7 +4,7 @@ import { useForm } from 'react-hook-form';
 const IsAdmin = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
-        fetch('https://boiling-sierra-59765.herokuapp.com/addUsers/admin', {
+        fetch('https://stay-fit.onrender.com/addUsers/admin', {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

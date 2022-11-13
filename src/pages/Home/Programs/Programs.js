@@ -7,7 +7,7 @@ const Programs = () => {
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
-        fetch('https://boiling-sierra-59765.herokuapp.com/programs')
+        fetch('https://stay-fit.onrender.com/programs')
             .then(res => res.json())
             .then(data => {
                 setPrograms(data)
